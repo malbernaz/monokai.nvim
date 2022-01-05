@@ -3,7 +3,7 @@
 Monokai Pro theme for Neovim with tree-sitter support. This theme have been forked from this amazing
 repo [tanvirtin/monokai.nvim](https://github.com/tanvirtin/monokai.nvim).
 
-<img width="1792" alt="monokai nvim" src="https://user-images.githubusercontent.com/25164326/121434903-0562f180-c94c-11eb-952d-df702d92fe25.png">
+<img src="https://raw.githubusercontent.com/malbernaz/monokai.nvim/master/screenshot.png" />
 
 ## Prerequisites
 
