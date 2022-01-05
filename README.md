@@ -1,27 +1,20 @@
-# Neovim Monokai
+# Neovim Monokai Pro
 
-Monokai Theme for Neovim with tree-sitter support
+Monokai Pro theme for Neovim with tree-sitter support. This theme have been forked from this amazing
+repo [tanvirtin/monokai.nvim](https://github.com/tanvirtin/monokai.nvim).
 
 <img width="1792" alt="monokai nvim" src="https://user-images.githubusercontent.com/25164326/121434903-0562f180-c94c-11eb-952d-df702d92fe25.png">
 
-## Supported Monokai Flavours
-- Monokai (monokai)
-- Monokai Pro (monokai_pro)
-- Monokai Soda (monokai_soda)
-
 ## Prerequisites
 
-Neovim >= 0.5.
+Neovim >= 0.5
 
 ## Installation
-| Plugin Manager                                       | Command                                                                              |
-|------------------------------------------------------|--------------------------------------------------------------------------------------|
-| [Packer](https://github.com/wbthomason/packer.nvim)  | `use 'tanvirtin/monokai.nvim'`                                                       |
-| [Vim-plug](https://github.com/junegunn/vim-plug)     | `Plug 'tanvirtin/monokai.nvim'`                                                      |
-| [NeoBundle](https://github.com/Shougo/neobundle.vim) | `NeoBundle 'tanvirtin/monokai.nvim'`                                                 |
-| [Vundle](https://github.com/VundleVim/Vundle.vim)    | `Bundle 'tanvirtin/monokai.nvim'`                                                    |
-| [Pathogen](https://github.com/tpope/vim-pathogen)    | `git clone https://github.com/tanvirtin/monokai.nvim.git ~/.vim/bundle/monokai.nvim` |
-| [Dein](https://github.com/Shougo/dein.vim)           | `call dein#add('tanvirtin/monokai.nvim')`                                            |
+
+| Plugin Manager                                      | Command                         |
+| --------------------------------------------------- | ------------------------------- |
+| [Packer](https://github.com/wbthomason/packer.nvim) | `use 'malbernaz/monokai.nvim'`  |
+| [Vim-plug](https://github.com/junegunn/vim-plug)    | `Plug 'malbernaz/monokai.nvim'` |
 
 ## Usage
 
@@ -30,16 +23,12 @@ In VimL:
 ```viml
 syntax on
 colorscheme monokai
-colorscheme monokai_pro
-colorscheme monokai_soda
 ```
 
 In Lua:
 
 ```lua
-require('monokai').setup {}
-require('monokai').setup { palette = require('monokai').pro }
-require('monokai').setup { palette = require('monokai').soda }
+require('monokai').setup({})
 ```
 
 ## Customization
@@ -48,33 +37,27 @@ It is possible to customize Monokai theme with `setup` function (only in Lua). P
 
 ```lua
 {
-    palette = {
-        name = 'monokai',
-        base1 = '#272a30',
-        base2 = '#26292C',
-        base3 = '#2E323C',
-        base4 = '#333842',
-        base5 = '#4d5154',
-        base6 = '#9ca0a4',
-        base7 = '#b1b1b1',
-        border = '#a1b5b1',
-        brown = '#504945',
-        white = '#f8f8f0',
-        grey = '#8F908A',
-        black = '#000000',
-        pink = '#f92672',
-        green = '#a6e22e',
-        aqua = '#66d9ef',
-        yellow = '#e6db74',
-        orange = '#fd971f',
-        purple = '#ae81ff',
-        red = '#e95678',
-        diff_add = '#3d5213',
-        diff_remove = '#4a0f23',
-        diff_change = '#27406b',
-        diff_text = '#23324d',
-    },
-    custom_hlgroups = {},
+  palette = {
+    base1 = "#211F22",
+    base2 = "#26292C",
+    base3 = "#2E323C",
+    base4 = "#3f4550",
+    base5 = "#484e5b",
+    base6 = "#5a6272",
+    base7 = "#6c7689",
+    white = "#FCFCFA",
+    pink = "#FF6188",
+    green = "#A9DC76",
+    aqua = "#78DCE8",
+    yellow = "#FFD866",
+    orange = "#FC9867",
+    purple = "#AB9DF2",
+    diff_add = "#3D5213",
+    diff_remove = "#4A0F23",
+    diff_change = "#27406B",
+    diff_text = "#23324D",
+  },
+  custom_hlgroups = {},
 }
 ```
 
@@ -82,31 +65,32 @@ An example of this would be as follows:
 
 ```lua
 local monokai = require('monokai')
-local palette = monokai.classic
+local palette = monokai.palette
+
 monokai.setup {
-    palette = {
-        diff_text = '#133337',
+  palette = {
+    diff_text = '#133337',
+  },
+  custom_hlgroups = {
+    TSInclude = {
+      fg = palette.aqua,
     },
-    custom_hlgroups = {
-        TSInclude = {
-            fg = palette.aqua,
-        },
-        GitSignsAdd = {
-            fg = palette.green,
-            bg = palette.base2
-        },
-        GitSignsDelete = {
-            fg = palette.pink,
-            bg = palette.base2
-        },
-        GitSignsChange = {
-            fg = palette.orange,
-            bg = palette.base2
-        },
-    }
+    GitSignsAdd = {
+      fg = palette.green,
+      bg = palette.base2
+    },
+    GitSignsDelete = {
+      fg = palette.pink,
+      bg = palette.base2
+    },
+    GitSignsChange = {
+      fg = palette.orange,
+      bg = palette.base2
+    },
+  }
 }
 ```
 
 ## Extras
 
-Extra color configs for **Kitty**, **Alacritty**, **Windows Terminal**, can be found in [extras](extras/). To use them, refer to their respective documentation.
+An extra color config for **Kitty**, can be found in [extras](extras/) and a **lualine** config is also available in `monokai.lualine`.
