@@ -13,8 +13,8 @@ return {
   yellow = "#FFD866",
   orange = "#FC9867",
   purple = "#AB9DF2",
-  diff_add = "#3D5213",
-  diff_remove = "#4A0F23",
-  diff_change = "#27406B",
-  diff_text = "#23324D",
+  diff_add = "#A9DC76",
+  diff_remove = "#FF6188",
+  diff_change = "#FC9867",
+  diff_text = "#D68D66",
 }
