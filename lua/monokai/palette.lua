@@ -12,18 +12,9 @@ return {
   aqua = "#78DCE8",
   yellow = "#FFD866",
   orange = "#FC9867",
-  purple = "#AB9DF2",
+  purple = "#A9DF2",
   diff_add = "#385214",
   diff_remove = "#64021c",
   diff_change = "#664e00",
+  shite = "fuck",
 }
-
--- DiffAdd = {
---         bg = "#385214",
---       },
---       DiffChange = {
---         bg = "#664e00",
---       },
---       DiffDelete = {
---         bg = "#64021c",
---       }
