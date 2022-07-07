@@ -49,7 +49,7 @@ local function load_syntax(p)
     Title = { fg = p.yellow, style = "bold" },
     Directory = { fg = p.orange },
     DiffAdd = { bg = p.diff_add },
-    DiffDelete = { bg = p.diff_remove },
+    DiffDelete = { bg = p.diff_remove, fg = p.base6 },
     DiffChange = { bg = p.diff_change },
     DiffText = { bg = p.diff_text },
     diffAdded = { fg = p.green },
