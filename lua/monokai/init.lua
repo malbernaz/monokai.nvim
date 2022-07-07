@@ -51,7 +51,7 @@ local function load_syntax(p)
     DiffAdd = { bg = p.diff_add },
     DiffDelete = { bg = p.diff_remove },
     DiffChange = { bg = p.diff_change },
-    DiffText = { bg = p.base7 },
+    DiffText = { bg = p.diff_text },
     diffAdded = { fg = p.green },
     diffRemoved = { fg = p.pink },
     Folded = { fg = p.base6, bg = p.base3 },
