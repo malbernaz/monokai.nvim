@@ -14,9 +14,8 @@ return {
   orange = "#FC9867",
   purple = "#AB9DF2",
   diff_add = "#385214",
-  diff_remove = "#FF6188",
+  diff_remove = "#64021c",
   diff_change = "#664e00",
-  diff_text = "#D68D66",
 }
 
 -- DiffAdd = {
