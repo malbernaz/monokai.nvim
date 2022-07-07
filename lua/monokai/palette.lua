@@ -13,8 +13,18 @@ return {
   yellow = "#FFD866",
   orange = "#FC9867",
   purple = "#AB9DF2",
-  diff_add = "#A9DC76",
+  diff_add = "#385214",
   diff_remove = "#FF6188",
-  diff_change = "#FC9867",
+  diff_change = "#664e00",
   diff_text = "#D68D66",
 }
+
+-- DiffAdd = {
+--         bg = "#385214",
+--       },
+--       DiffChange = {
+--         bg = "#664e00",
+--       },
+--       DiffDelete = {
+--         bg = "#64021c",
+--       }
