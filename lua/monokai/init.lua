@@ -1,5 +1,15 @@
 local palette = require("monokai.palette")
 
+local function highlight(group, color)
+  color = color or {}
+  local style = color.style and "gui=" .. color.style or "gui=NONE"
+  local fg = color.fg and "guifg=" .. color.fg or "guifg=NONE"
+  local bg = color.bg and "guibg=" .. color.bg or "guibg=NONE"
+  local sp = color.sp and "guisp=" .. color.sp or ""
+
+  vim.cmd("highlight " .. group .. " " .. style .. " " .. fg .. " " .. bg .. " " .. sp)
+end
+
 local function load_syntax(p)
   return {
     Normal = { fg = p.white, bg = p.base2 },
@@ -229,7 +239,7 @@ M.setup = function(config)
   local syntax = vim.tbl_deep_extend("keep", config.custom_hlgroups, load_syntax(palette))
 
   for group, colors in pairs(syntax) do
-    vim.api.nvim_set_hl(0, group, colors or {})
+    highlight(group, colors)
   end
 
   local async_load_plugin = nil
@@ -241,7 +251,7 @@ M.setup = function(config)
     )
 
     for group, colors in pairs(plugin_syntax) do
-      vim.api.nvim_set_hl(0, group, colors or {})
+      highlight(group, colors)
     end
 
     async_load_plugin:close()
