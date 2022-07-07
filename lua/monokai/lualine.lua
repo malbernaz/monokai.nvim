@@ -9,7 +9,7 @@ local theme = {
   insert = { a = { fg = palette.base1, bg = palette.aqua, gui = "bold" } },
   terminal = { a = { fg = palette.base1, bg = palette.aqua, gui = "bold" } },
   visual = { a = { fg = palette.base1, bg = palette.purple, gui = "bold" } },
-  replace = { a = { fg = palette.base1, bg = palette.red, gui = "bold" } },
+  replace = { a = { fg = palette.base1, bg = palette.pink, gui = "bold" } },
   command = { a = { fg = palette.base1, bg = palette.white, gui = "bold" } },
   inactive = {
     a = { fg = palette.purple, bg = palette.base1, gui = "bold" },
