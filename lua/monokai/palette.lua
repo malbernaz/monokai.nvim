@@ -12,7 +12,7 @@ return {
   aqua = "#78DCE8",
   yellow = "#FFD866",
   orange = "#FC9867",
-  purple = "#A9DF2",
+  purple = "#AB9DF2",
   diff_add = "#385214",
   diff_remove = "#64021c",
   diff_change = "#664e00",
