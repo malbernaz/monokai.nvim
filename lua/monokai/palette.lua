@@ -16,5 +16,4 @@ return {
   diff_add = "#385214",
   diff_remove = "#64021c",
   diff_change = "#664e00",
-  shite = "fuck",
 }
