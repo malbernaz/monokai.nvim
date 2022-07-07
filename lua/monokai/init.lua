@@ -225,7 +225,7 @@ local M = {}
 M.palette = palette
 
 M.setup = function(config)
-  config = vim.tbl_deep_extend("keep", { custom_hlgroups = {} }, config)
+  config = vim.tbl_deep_extend("keep", { custom_hlgroups = {} }, config or {})
 
   vim.cmd("hi clear")
   if vim.fn.exists("syntax_on") then
