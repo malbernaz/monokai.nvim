@@ -13,7 +13,7 @@ end
 local function load_syntax(p)
   return {
     Normal = { fg = p.white, bg = p.base2 },
-    NormalFloat = { bg = p.base3 },
+    NormalFloat = { bg = p.base3, fg = p.base7 },
     Pmenu = { fg = p.white, bg = p.base3 },
     PmenuSel = { fg = p.white, bg = p.base5 },
     PmenuSelBold = { fg = p.white, bg = p.base5 },
